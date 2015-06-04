@@ -1,0 +1,184 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+body {
+	background-color: #0c1001;
+	font-family: "Century Gothic", CenturyGothic, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-size: 18px;
+}
+.wrapper {
+	max-width: 802px;
+	margin: 20px auto;
+}
+p {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 700px;
+	padding-top: 15px;
+	line-height: 24px;
+}
+a {
+	color: #fff;
+	font: 800 30px "Century Gothic", CenturyGothic, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	text-align: center;
+}
+a:hover {
+	text-decoration: none;
+}
+img {
+	border: 1px solid #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 20px auto;
+	width: 100%;
+	display: block;
+	max-width: 100%;
+}
+#cookies {
+	background-color: #fff;
+	padding: 30px 25px 20px;
+	min-width: 295px;
+	max-width: 400px;
+	margin: 0 auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	display: block;
+}
+#cookies p {
+	text-align: left;
+	font-size: 20px;
+	font-weight: 800;
+	padding-top: 0;
+	padding-bottom: 10px;
+}
+p.utm-values {
+	padding-top: 0;
+	padding-right: 30px;
+	padding-bottom: 5px;
+	line-height: 200%;
+}
+.newLink {
+	padding-top: 30px;
+	display: block;
+}
+#utm-form {
+	border: 1px solid #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #015196;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#015196), to(#00a3de));
+	background-image: -webkit-linear-gradient(top, #015196, #00a3de);
+	background-image: -moz-linear-gradient(top, #015196, #00a3de);
+	background-image: -ms-linear-gradient(top, #015196, #00a3de);
+	background-image: -o-linear-gradient(top, #015196, #00a3de);
+	background-image: linear-gradient(to bottom, #015196, #00a3de);
+ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#015196, endColorstr=#00a3de);
+	padding: 30px 25px 25px;
+	max-width: 500px;
+	min-width: 295px;
+	margin: 20px auto 0;
+}
+#utm-form label {
+	cursor: pointer;
+	color: #fff;
+	display: block;
+	margin: 5px 0 3px;
+	font-weight: 500;
+	font-size: 20px;
+}
+#utm-form input[type="text"] {
+	width: 100%;
+	background: #fff;
+	margin: 0 0 15px;
+	padding: 10px;
+	border-radius: 5px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+}
+#utm-form input[type="text"]:hover {
+	-webkit-transition: border-color 0.3s ease-in-out;
+	-moz-transition: border-color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+	border: 1px solid #AAA;
+}
+.button {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	min-width: 295px;
+	border: 1px solid #DA682A;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 20px 40px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 0 0 rgba(0,0,0,0.3);
+	color: #fff;
+	background-color: #EB8300;
+	cursor: pointer;
+	margin: 20px auto;
+	font: 400 22px "Century Gothic", CenturyGothic, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+.button.getutms {
+}
+.button.start {
+	background-color: #870b0b;
+	border: 1px solid #5c0505;
+	margin-top: 15px;
+	width: 100%;
+	max-width: 500px;
+	min-width: 295px;
+}
+.button.again {
+	margin-top: 15px;
+	width: 100%;
+	max-width: 500px;
+	min-width: 295px;
+}
+.transparent:hover {
+	-khtml-opacity: .7;
+	-moz-opacity: .7;
+ -ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+	filter: alpha(opacity=70);
+	opacity: .7;
+	zoom: 1
+}
+
+.leftCol {
+	width: 45%;
+	display: block;
+	float: left;
+	min-width: 300px;
+}
+.rightCol {
+	width: 45%;
+	display: block;
+	float: left;
+	margin-left: 5%;
+	min-width: 300px;
+}
+
+@media only screen and (max-width: 479px) {
+.leftCol {
+}
+.rightCol {
+	clear: both;
+	margin-left: 0;
+}
+}

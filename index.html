@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="stylesheet" type="text/css" media="all" href="css/styles.css" />
+      <style>
+	  	 p {
+			 text-align:left;
+		 }
+     </style>
+     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <p>The UTM parameter values from the page URL will be set as cookies in the form fields below. The fields will be hidden on your Marketo form.</p>
+         <p style="padding-top: 15px;padding-bottom: 20px;">Be sure to set <strong>Get Value from</strong> as "<strong><em>Cookie Value</em></strong>" when setting up hidden fields.
+         
+         <form id="utm-form">
+            <label  for='campaign_name'>
+            Campaign Name:            </label>
+            <input type="text" name='campaign_name' id='utm_campaign'>
+            <label  for='utm_source'>
+            Campaign Source:            </label>
+            <input type="text" name='utm_source' id='utm_source'>
+            <label  for='utm_medium'>
+            Campaign Medium:            </label>
+            <input type="text" name='utm_medium' id='utm_medium'>
+            <label  for='utm_term'>
+            Campaign Term           </label>
+            <input type="text" name='utm_term' id='utm_term'>
+            <label  for='campaignContent'>
+            Campaign Content:            </label>
+            <input type="text" name='campaignContent' id='utm_content'>
+                  </form>
+
+         <a id="btnSet" class="button transparent" onClick="setCookies()">Set cookies</a><a href="" class="newSite"><input type="submit" id="btnGo" class="transparent button start newSite" value="Go to another site"></a>
+      </div>
+      <script type="text/javascript">
+         function getQueryParams(qs) {
+         
+             qs = qs.split("+").join(" ");
+         
+             var params = {}, tokens,
+             re = /[?&]?([^=]+)=([^&]*)/g;
+         
+             while (tokens = re.exec(qs)) {
+                 params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+             }
+         
+             return params;
+         }
+         
+         function setCookies() {
+         
+         var query = getQueryParams(document.location.search);
+         
+         for (var key in query) {
+         
+             //console.log(key, query[key]);
+         
+             document.cookie = key + "=" + query[key];
+         }
+        
+         var elem = document.getElementById("utm_campaign");
+         var elem2 = document.getElementById("utm_source");
+         var elem3 = document.getElementById("utm_medium");
+         var elem4 = document.getElementById("utm_term");
+         var elem5 = document.getElementById("utm_content");
+         elem.value = query.utm_campaign;
+         elem2.value = query.utm_source;
+         elem3.value = query.utm_medium;
+         elem4.value = query.utm_term;
+         elem5.value = query.utm_content;
+         }
+         
+         //window.onload = getQueryParams();
+		 
+      </script>
+      <script type="text/javascript" src="js/links.js"></script>
+   </body>
+</html>
