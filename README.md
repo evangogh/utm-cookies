@@ -1,5 +1,4 @@
-# utm-cookies
-Using cookies to capture UTM parameters
+How-to on using cookies to capture UTM parameters.
 
 I scoured the Marketo forums as well as myriad other sites and pages for weeks to figure out how to capture the original referral source of a user’s first visit, even if they don't convert at that time. But I never found a complete solution I could implement since I am not an experienced developer.  Therefore, in order to save others from the frustration I experienced, I offer the following detailed explanation of what finally worked for me.  Specifically, this is how to set the values from a URL with UTM parameter as cookies so a visitor’s original referral source can be captured. 
 
