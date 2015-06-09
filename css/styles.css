@@ -23,9 +23,9 @@ body {
 p {
 	text-align: center;
 	margin: 0 auto;
-	max-width: 700px;
+	max-width: 550px;
 	padding-top: 15px;
-	line-height: 24px;
+	line-height: 26px;
 }
 a {
 	color: #fff;
@@ -88,7 +88,7 @@ p.utm-values {
 	background-image: linear-gradient(to bottom, #015196, #00a3de);
  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#015196, endColorstr=#00a3de);
 	padding: 30px 25px 25px;
-	max-width: 500px;
+	max-width: 550px;
 	min-width: 295px;
 	margin: 20px auto 0;
 }
@@ -119,7 +119,7 @@ p.utm-values {
 .button {
 	display: block;
 	width: 100%;
-	max-width: 500px;
+	max-width: 550px;
 	min-width: 295px;
 	border: 1px solid #DA682A;
 	-webkit-border-radius: 10px;
@@ -133,7 +133,8 @@ p.utm-values {
 	background-color: #EB8300;
 	cursor: pointer;
 	margin: 20px auto;
-	font: 400 22px "Century Gothic", CenturyGothic, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	font: 20px "Century Gothic", CenturyGothic, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform:uppercase;
 }
 .button.getutms {
 }
@@ -142,13 +143,12 @@ p.utm-values {
 	border: 1px solid #5c0505;
 	margin-top: 15px;
 	width: 100%;
-	max-width: 500px;
 	min-width: 295px;
 }
 .button.again {
 	margin-top: 15px;
 	width: 100%;
-	max-width: 500px;
+	max-width: 400px;
 	min-width: 295px;
 }
 .transparent:hover {
