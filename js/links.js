@@ -68,7 +68,7 @@ function GetAllCookies() {
     }, {
         href: 'http://evangogh.github.io/utm-cookies/?utm_campaign=xanadu&utm_source=xray&utm_medium=xylophone&utm_term=xterra&utm_content=xenophobe'
     }, {
-        href: 'http://evangogh.github.io/utm-cookies/?utm_campaign=yellow&utm_source=yankee&utm_medium=yield&utm_term=year&utm_content=yeast'
+        href: 'http://evangogh.github.io/utm-cookies/?utm_campaign=yellow&utm_source=yankee&utm_medium=yield&utm_term=year&utm_content=yodel'
     }, {
         href: 'http://evangogh.github.io/utm-cookies/?utm_campaign=zinc&utm_source=zulu&utm_medium=zap&utm_term=zany&utm_content=zebra'
 	}
