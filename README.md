@@ -36,6 +36,12 @@ for (var key in query) {
     //console.log(key, query[key]);
 
     document.cookie = key + "=" + query[key];
+	
+	//Setting domain and path attributes allow cookies to be read across subdomains
+	//To have a cookie available to all subdomains, you must put a . in front of your domain.
+	//Setting the path=/ will have the cookie be available within the entire specified domain(aka .example.com). 
+
+	//document.cookie = key + "=" + query[key] + ";domain=.yourdomain.com;path=/";
 }
 
 //This is getting the cookies 
