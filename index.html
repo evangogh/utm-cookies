@@ -14,7 +14,7 @@
    </head>
    <body>
       <div class="wrapper">
-         <p>The UTM parameter values from the page URL will be set as cookies in the form fields below. The fields will be hidden on your Marketo form.</p>
+         <p>The UTM parameter values from the page URL will be set as cookies in the form fields below. The fields will be hidden on your form.</p>
          <p>Be sure to set <strong>Get Value from</strong> as "<strong><em>Cookie Value</em></strong>" when setting up hidden fields.</p>
      
          <form id="utm-form">
@@ -38,7 +38,7 @@
          <a id="btnSet" class="button transparent" onClick="setCookies()">Set cookies</a><a href="" class="newSite"><input type="submit" id="btnGo" class="transparent button start newSite" value="Go to another site"></a>
       </div>
       <script type="text/javascript">
-         function getQueryParams(qs) {
+          /* function getQueryParams(qs) {
          
              qs = qs.split("+").join(" ");
          
@@ -50,9 +50,9 @@
              }
          
              return params;
-         }
+         } */
          
-         function setCookies() {
+     /* function setCookies() {
          
          var query = getQueryParams(document.location.search);
          
@@ -60,17 +60,17 @@
          
              //console.log(key, query[key]);
          
-             document.cookie = key + "=" + query[key];
-			 
-			//Setting domain and path attributes allow cookies to be read across subdomains
-			//To have a cookie available to all subdomains, you must put a . in front of your domain.
-			//Setting the path=/ will have the cookie be available within the entire specified domain(aka .example.com). 
-			
-			//document.cookie = key + "=" + query[key] + ";domain=.yourdomain.com;path=/";
-			
+             document.cookie = key + "=" + query[key]; */
+       
+      //Setting domain and path attributes allow cookies to be read across subdomains
+      //To have a cookie available to all subdomains, you must put a . in front of your domain.
+      //Setting the path=/ will have the cookie be available within the entire specified domain(aka .example.com). 
+      
+      //document.cookie = key + "=" + query[key] + ";domain=.yourdomain.com;path=/";
+      
          }
         
-         var elem = document.getElementById("utm_campaign");
+         /* var elem = document.getElementById("utm_campaign");
          var elem2 = document.getElementById("utm_source");
          var elem3 = document.getElementById("utm_medium");
          var elem4 = document.getElementById("utm_term");
@@ -80,11 +80,62 @@
          elem3.value = query.utm_medium;
          elem4.value = query.utm_term;
          elem5.value = query.utm_content;
-         }
+         } */
          
          //window.onload = getQueryParams();
-		 
-      </script>
+
+
+    var queryString = window.location.search || '';
+    var keyValPairs = [];
+    var params      = {};
+    queryString     = queryString.substr(1);
+
+    if (queryString.length) {
+           keyValPairs = queryString.split('&');
+           // console.log(keyValPairs);
+           for (pairNum in keyValPairs) {
+               // console.log(pairNum);
+            var key = keyValPairs[pairNum].split('=')[0];
+            // console.log(key.length);
+            if (!key.length) continue;
+            if (typeof params[key] === 'undefined') {
+                 params[key] = [];
+                  params[key].push(keyValPairs[pairNum].split('=')[1]);
+            }
+        }
+    }
+  console.log(params); 
+
+    var utmCampaign = (typeof params['utm_campaign'] !== 'undefined') ? params['utm_campaign'][0] : " ";
+    var utmMedium = (typeof params['utm_medium'] !== 'undefined') ? params['utm_medium'][0] : " ";
+    var utmSource = (typeof params['utm_source'] !== 'undefined') ? params['utm_source'][0] : " ";
+    var utmTerm = (typeof params['utm_term'] !== 'undefined') ? params['utm_term'][0] : " ";
+    var utmContent = (typeof params['utm_content'] !== 'undefined') ? params['utm_content'][0] : " ";
+
+console.log(utmCampaign);
+
+document.utmForm.utm_campaign.value=utmCampaign;
+
+document.utmForm.utm_medium.value=utmMedium;
+
+document.utmForm.utm_source.value=utmSource;
+
+document.utmForm.utm_term.value=utmTerm;
+
+document.utmForm.utm_content.value=utmContent;
+
+  function setCookies() {
+         
+         var query = params;
+         
+         for (var key in query) {
+         
+             //console.log(key, query[key]);
+         
+             document.cookie = key + "=" + query[key];
+}
+}         
+ </script>
       <script type="text/javascript" src="js/links.js"></script>
    </body>
 </html>
