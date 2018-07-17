@@ -167,11 +167,11 @@ function GetAllCookies() {
 
   $(document).ready(function() {
 	  var utmcampaign = $("#utm_campaign").val() 
-     $('#btnGo').attr('disabled','disabled');
+    // $('#btnGo').attr('disabled','disabled');
 	 $('#btnGo').removeClass('transparent','');
 	  $('#btnGo').css('cursor','default');
      $("#btnSet").click(function() {
-           $('#btnGo').removeAttr('disabled');
+          // $('#btnGo').removeAttr('disabled');
 		   $('#btnGo').addClass('transparent');
 		   $('#btnGo').css('cursor','pointer');
      });
