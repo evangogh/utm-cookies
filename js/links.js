@@ -97,15 +97,15 @@ function GetAllCookies() {
 
 (function () {
     var newSite = [{
-		href: 'http://evangogh.github.io/second-site/index.html'
+		href: 'http://idigdev.com/cookies/index.html'
     }, {
-        href: 'http://evangogh.github.io/second-site/site2.html'
+        href: 'http://idigdev.com/cookies/site2.html'
 	}, {
-        href: 'http://evangogh.github.io/second-site/site3.html'
+        href: 'http://idigdev.com/cookies/site3.html'
     }, {
-        href: 'http://evangogh.github.io/second-site/site4.html'
+        href: 'http://idigdev.com/cookies/site4.html'
     }, {
-        href: 'http://evangogh.github.io/second-site/site5.html'
+        href: 'http://idigdev.com/cookies/site5.html'
     }
 
     ];
