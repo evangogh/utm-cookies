@@ -40,53 +40,6 @@
          <a id="btnSet" class="button transparent" onClick="setCookies()">Set cookies</a><a href="" class="newSite"><input type="submit" id="btnGo" class="transparent button start newSite" value="Go to another site"></a>
       </div>
       <script type="text/javascript">
-          /* function getQueryParams(qs) {
-         
-             qs = qs.split("+").join(" ");
-         
-             var params = {}, tokens,
-             re = /[?&]?([^=]+)=([^&]*)/g;
-         
-             while (tokens = re.exec(qs)) {
-                 params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-             }
-         
-             return params;
-         } */
-         
-     /* function setCookies() {
-         
-         var query = getQueryParams(document.location.search);
-         
-         for (var key in query) {
-         
-             //console.log(key, query[key]);
-         
-             document.cookie = key + "=" + query[key]; */
-       
-      //Setting domain and path attributes allow cookies to be read across subdomains
-      //To have a cookie available to all subdomains, you must put a . in front of your domain.
-      //Setting the path=/ will have the cookie be available within the entire specified domain(aka .example.com). 
-      
-      //document.cookie = key + "=" + query[key] + ";domain=.yourdomain.com;path=/";
-      
-       //  }
-        
-         /* var elem = document.getElementById("utm_campaign");
-         var elem2 = document.getElementById("utm_source");
-         var elem3 = document.getElementById("utm_medium");
-         var elem4 = document.getElementById("utm_term");
-         var elem5 = document.getElementById("utm_content");
-         elem.value = query.utm_campaign;
-         elem2.value = query.utm_source;
-         elem3.value = query.utm_medium;
-         elem4.value = query.utm_term;
-         elem5.value = query.utm_content;
-         } */
-         
-         //window.onload = getQueryParams();
-
-
     var queryString = window.location.search || '';
     var keyValPairs = [];
     var params      = {};
@@ -133,6 +86,12 @@ document.utmForm.utm_content.value=utmContent;
          for (var key in query) {
          
              //console.log(key, query[key]);
+
+             //Setting domain and path attributes allow cookies to be read across subdomains
+      //To have a cookie available to all subdomains, you must put a . in front of your domain.
+      //Setting the path=/ will have the cookie be available within the entire specified domain(aka .example.com). 
+      
+            //document.cookie = key + "=" + query[key] + ";domain=.yourdomain.com;path=/";
          
              document.cookie = key + "=" + query[key];
 }
